@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">		
+
+	<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/prettify/r298/prettify.min.css">
+	<link rel="stylesheet" type="text/css" href="css/prettify.override.css">
+	<script type="text/javascript" src='http://cdn.bootcss.com/prettify/r298/prettify.min.js'></script>
+	<script type="text/javascript" src='js/prettify.load.js'></script>
+
+</head>
+<body>
+	<div class='container'>
+		<h2>代码美化</h2>
+		<p>效果如下</p>
+		<pre>
+.prettyprint *{font-family:'courier new',monospace;}
+.prettyprint .com { color: #93a1a1; }
+.prettyprint .lit { color: #AE81FF; }</pre>
+		<p>
+			如何做：
+			<br />
+			1、引入下面的js和css
+		</p>
+		<pre>&lt;link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/prettify/r298/prettify.min.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="css/prettify.override.css"&gt;
+&lt;script type="text/javascript" src='http://cdn.bootcss.com/prettify/r298/prettify.min.js'&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src='js/prettify.load.js'&gt;&lt;/script&gt;</pre>
+		<p>
+		2、将你的代码放到&lt;pre&gt;这里是代码&lt;/pre&gt;中。
+		<br />
+		这样就OK了。
+		<br />
+		<h4>说明一下</h4>
+		<p>
+			代码美化使用的是Google的prettify，地址：<a href="https://github.com/google/code-prettify" target="_blank">https://github.com/google/code-prettify</a>
+			<br />
+			其中的[css/prettify.override.css]和[js/prettify.load.js]是我自己的css和js文件。
+			<br />
+	 		[css/prettify.override.css]是对[prettify.min.css]的重写，我修改了一下样式。
+	 		<br />
+	 		而[js/prettify.load.js]里面的代码如下：
+		</p>
+	 	<pre>
+window.onload = function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i < pres.length;i++){
+		var item = pres[i];
+		item.setAttribute('class','prettyprint');
+	}
+	prettyPrint();
+};</pre>		
+		<p>
+			剥去我的东西，其实就是引入下面两个
+			<pre>&lt;link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/prettify/r298/prettify.min.css"&gt;
+&lt;script type="text/javascript" src='http://cdn.bootcss.com/prettify/r298/prettify.min.js'&gt;&lt;/script&gt;
+</pre>
+		然后在需要美化的地方加上<span class='linecode'>prettyprint</span>类，再调用<span class='linecode'>prettyPrint()</span>方法。
+		</p>
+		<h4>方法2</h4>
+		<a href='jsshow.html' target="_blank">jsshow.html</a>
+		<h4>下载</h4>
+		<a href='prettify.rar' >prettify.rar</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+html{		
+	background-color: rgb(242, 241, 243);
+}
+
+.container{	
+	/*background-color: #eee;*/
+	border-right:1px dashed gray;
+	border-left:1px dashed gray;
+	min-height: 700px;
+	width:65%;
+	min-width: 720px;
+	margin: 10px auto;
+	padding:20px 20px;
+}
+
+body{
+	padding:10px 90px;
+}
+
+p{
+	line-height: 29px;
+}
+
+.linecode{
+	padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #e4ccd3;
+    border-radius: 4px;
+}
